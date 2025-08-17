@@ -3,6 +3,8 @@ import { Montserrat } from 'next/font/google'
 import './globals.css'
 import Nav from '@/components/nav'
 import { ThemeProvider } from '@/components/theme-provider'
+import { RecaptchaProvider } from '@/components/recaptcha-provider'
+import { Toaster } from '@/components/ui/sonner'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -18,12 +20,15 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body className={montserrat.className}>
-        <ThemeProvider attribute="class" disableTransitionOnChange>
-          <Nav />
-          <div className="text-foreground mx-auto w-full max-w-screen-lg px-4 pt-28 pb-10 sm:px-6 md:px-8">
-            {children}
-          </div>
-        </ThemeProvider>
+        <RecaptchaProvider>
+          <ThemeProvider attribute="class" disableTransitionOnChange>
+            <Nav />
+            <div className="text-foreground mx-auto w-full max-w-screen-lg px-4 pt-28 pb-10 sm:px-6 md:px-8">
+              {children}
+            </div>
+            <Toaster />
+          </ThemeProvider>
+        </RecaptchaProvider>
       </body>
     </html>
   )

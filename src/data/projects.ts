@@ -4,7 +4,6 @@ type Project = {
   previewImage: string
   repoUrl: string
   liveLink: string
-  // Optional metadata to enrich Work page without changing UI for simple entries
   role?: string
   stack?: string[]
   highlights?: string[]

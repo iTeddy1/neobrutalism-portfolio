@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from '@/components/ui/button'
 import {
   Card,
@@ -12,7 +14,6 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 import links from '@/data/links'
 import PROJECTS from '@/data/projects'
 import education from '@/data/education'
-import PAST_ROLES from '@/data/experience'
 import Link from 'next/link'
 
 const resumeHref = '/Frontend%20Developer.pdf'

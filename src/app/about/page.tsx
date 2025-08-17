@@ -9,6 +9,8 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { ContactDialog } from '@/components/contact-dialog'
 import education from '@/data/education'
 
 export default function About() {
@@ -103,6 +105,26 @@ export default function About() {
       <Skills />
 
       <Experience />
+
+      {/* Contact Section */}
+      <Card className="mt-16">
+        <CardHeader className="text-center">
+          <CardTitle className="text-xl sm:text-2xl">
+            Let&apos;s Work Together
+          </CardTitle>
+          <CardDescription className="text-base sm:text-lg">
+            Ready to bring your project to life? I&apos;d love to hear about
+            your ideas and how I can help.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="flex justify-center">
+          <ContactDialog>
+            <Button size="lg" className="min-w-[150px]">
+              Get in Touch
+            </Button>
+          </ContactDialog>
+        </CardContent>
+      </Card>
     </div>
   )
 }
