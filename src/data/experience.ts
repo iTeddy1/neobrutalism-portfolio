@@ -1,33 +1,33 @@
 const PAST_ROLES: {
   company: string
   role: string
-  description: string
+  description: string | string[]
   startDate: string
   endDate: string
 }[] = [
   {
-    company: 'ACME Solutions',
-    role: 'CEO',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam vel hic aspernatur molestiae exercitationem rerum reiciendis mollitia magnam harum ipsum?',
-    startDate: 'March 2023',
-    endDate: 'Now',
+    company: 'Atom Solution',
+    role: 'Frontend Developer Intern',
+    description: [
+      'Built responsive Next.js interfaces from Figma using Tailwind CSS and TypeScript',
+      'Implemented reusable components with shadcn/ui and managed state with Redux',
+      'Collaborated in agile sprints with code reviews and Git workflows',
+      'Focused on performance, accessibility, and clean code (ESLint/TypeScript)',
+    ],
+    startDate: 'March 2025',
+    endDate: 'March 2025',
   },
   {
-    company: 'Google',
-    role: 'Software Engineer',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam vel hic aspernatur molestiae exercitationem rerum reiciendis mollitia magnam harum ipsum?',
-    startDate: 'April 2021',
-    endDate: 'March 2023',
-  },
-  {
-    company: 'Vercel',
-    role: 'Developer Advocate',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam vel hic aspernatur molestiae exercitationem rerum reiciendis mollitia magnam harum ipsum?',
-    startDate: 'April 2021',
-    endDate: 'June 2018',
+    company: 'Personal Projects',
+    role: 'Frontend Developer',
+    description: [
+      'Delivered multiple React/Next.js projects with modern UI patterns, API integrations, and state management',
+      'Translated Figma designs into pixel-perfect, mobile-first UIs',
+      'Deployed to Vercel with environment-aware setups',
+      'Practiced component composition, custom hooks, and performance best practices',
+    ],
+    startDate: '2023',
+    endDate: 'Present',
   },
 ]
 

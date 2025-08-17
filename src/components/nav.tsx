@@ -1,6 +1,6 @@
 'use client'
 
-import { Link } from 'next-view-transitions'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { ThemeSwitcher } from './theme-switcher'
@@ -31,7 +31,7 @@ export default function Nav() {
             <Link
               key={link.path}
               className={clsx(
-                'hover:border-border rounded-base border-2 px-2 py-1 transition-colors',
+                'hover:border-border rounded-base border-2 px-2 py-1 whitespace-nowrap transition-colors',
                 path === link.path ? 'border-border' : 'border-transparent',
               )}
               href={link.path}

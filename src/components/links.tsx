@@ -1,38 +1,26 @@
+import links from '@/data/links'
 import {
-  IconType,
-  SiGithub,
-  SiGmail,
-  SiLinkedin,
-  SiMedium,
-} from '@icons-pack/react-simple-icons'
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
 
 export default function Links() {
-  const links: { icon: IconType; href: string }[] = [
-    {
-      icon: SiGmail,
-      href: 'mailto:johndoe@gmail.com',
-    },
-    {
-      icon: SiGithub,
-      href: 'https://github.com/johndoe',
-    },
-    {
-      icon: SiLinkedin,
-      href: 'https://www.linkedin.com/in/johndoe/',
-    },
-    {
-      icon: SiMedium,
-      href: 'https://medium.com/@johndoe',
-    },
-  ]
-
   return (
-    <div className="mr-auto mt-20 flex w-full flex-wrap items-center gap-10">
-      {links.map((link, id) => {
+    <div className="mt-20 mr-auto flex w-full flex-wrap items-center gap-10">
+      {links.map((link) => {
         return (
-          <a target="_blank" key={id} href={link.href}>
-            <link.icon title="" />
-          </a>
+          <TooltipProvider key={link.title}>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <a target="_blank" key={link.href} href={link.href}>
+                  <link.icon />
+                </a>
+              </TooltipTrigger>
+              <TooltipContent>{link.title}</TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         )
       })}
     </div>

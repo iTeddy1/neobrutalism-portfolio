@@ -10,12 +10,12 @@ import {
 export default function Skills() {
   return (
     <div className="mb-16">
-      <h2 className="mb-8 text-xl font-heading sm:text-2xl">Skills</h2>
+      <h2 className="font-heading mb-8 text-xl sm:text-2xl">Skills</h2>
 
       {SKILLS.map((item, id) => {
         return (
           <div key={id}>
-            <h3 className="mb-4 text-lg font-heading sm:text-xl">
+            <h3 className="font-heading mb-4 text-lg sm:text-xl">
               {item.field}
             </h3>
 

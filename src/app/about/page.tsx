@@ -1,19 +1,104 @@
+import Education from '@/components/sections/education'
 import Experience from '@/components/sections/experience'
 import Skills from '@/components/sections/skills'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import education from '@/data/education'
 
 export default function About() {
+  const strengths = [
+    'Performance-first mindset (web + mobile)',
+    'Pixel-perfect, responsive UI from Figma',
+    'Clean, typed code (TypeScript, ESLint)',
+    'State management with Redux and modern hooks',
+    'Accessibility and UX details that matter',
+  ]
+
+  const tooling = [
+    'Vercel',
+    'Figma',
+    'Chrome DevTools',
+    'WordPress',
+    'Docker',
+    'Git & PR reviews',
+  ]
+
+  const learning = ['GraphQL', 'React Native patterns', 'CI/CD automation']
+
   return (
     <div className="font-base">
-      <h1 className="mb-8 text-2xl font-heading sm:text-4xl">About</h1>
+      <h1 className="font-heading mb-8 text-2xl sm:text-4xl">About</h1>
 
-      <div className="mb-10 text-base sm:text-lg">
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est
-          consequatur, harum pariatur provident rerum placeat magni voluptas
-          consectetur in exercitationem nobis aut, molestiae iure possimus
-          aspernatur nesciunt laudantium ab atque.
-        </p>
+      <Card className="mb-8">
+        <CardHeader>
+          <CardTitle className="text-xl sm:text-2xl">About me</CardTitle>
+          <CardDescription className="text-base sm:text-lg">
+            I design and build fast, reliable interfaces for web and mobile. My
+            focus is shipping production-quality UI that feels great and scales.
+            I enjoy turning Figma designs into clean, accessible components and
+            optimizing for performance from day one.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p className="text-base">
+            Specialized in {education.specialize?.toLowerCase()} for the{' '}
+            {education.field?.toLowerCase()} domain, I care about readable code,
+            thoughtful UX, and maintainable systems. I’m comfortable across
+            React, Next.js, and React Native with TypeScript and Tailwind.
+          </p>
+        </CardContent>
+      </Card>
+
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">Strengths & values</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="list-disc space-y-2 pl-5 text-sm">
+              {strengths.map((s) => (
+                <li key={s}>{s}</li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">Tooling & workflow</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex flex-wrap gap-2">
+              {tooling.map((t) => (
+                <Badge key={t} variant="neutral">
+                  {t}
+                </Badge>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
       </div>
+
+      <Card className="mt-6 mb-12">
+        <CardHeader>
+          <CardTitle className="text-lg">Currently learning</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="flex flex-wrap gap-2">
+            {learning.map((l) => (
+              <Badge key={l}>{l}</Badge>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+
+      <Education />
 
       <Skills />
 

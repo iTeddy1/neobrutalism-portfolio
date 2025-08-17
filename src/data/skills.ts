@@ -1,8 +1,6 @@
 import {
   type IconType,
-  SiAstro,
-  SiBootstrap,
-  SiCss3,
+  SiCss,
   SiDocker,
   SiHtml5,
   SiJavascript,
@@ -13,10 +11,18 @@ import {
   SiNodedotjs,
   SiPostgresql,
   SiReact,
-  SiRedis,
-  SiRubyonrails,
-  SiSass,
   SiTailwindcss,
+  SiNativescript,
+  SiRedux,
+  SiFigma,
+  SiOdoo,
+  SiGooglechrome,
+  SiWordpress,
+  SiVercel,
+  SiShadcnui,
+  SiTypescript,
+  SiPhp,
+  SiGraphql,
 } from '@icons-pack/react-simple-icons'
 
 const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
@@ -25,17 +31,16 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
       field: 'Frontend',
       skills: [
         { skill: 'html', icon: SiHtml5 },
-        { skill: 'css', icon: SiCss3 },
+        { skill: 'css', icon: SiCss },
         { skill: 'javascript', icon: SiJavascript },
+        { skill: 'typescript', icon: SiTypescript },
+        { skill: 'php', icon: SiPhp },
         { skill: 'react', icon: SiReact },
-        { skill: 'sass', icon: SiSass },
-        { skill: 'tailwind', icon: SiTailwindcss },
+        { skill: 'react-native', icon: SiNativescript },
         { skill: 'nextjs', icon: SiNextdotjs },
-        { skill: 'astro', icon: SiAstro },
-        {
-          skill: 'bootstrap',
-          icon: SiBootstrap,
-        },
+        { skill: 'tailwind', icon: SiTailwindcss },
+        { skill: 'redux', icon: SiRedux },
+        { skill: 'shadcn/ui', icon: SiShadcnui },
       ],
     },
     {
@@ -46,16 +51,12 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
           icon: SiNodedotjs,
         },
         {
-          skill: 'ruby on rails',
-          icon: SiRubyonrails,
-        },
-        {
-          skill: 'redis',
-          icon: SiRedis,
-        },
-        {
           skill: 'postgresql',
           icon: SiPostgresql,
+        },
+        {
+          skill: 'graphql',
+          icon: SiGraphql,
         },
         {
           skill: 'mongodb',
@@ -73,6 +74,16 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
           skill: 'docker',
           icon: SiDocker,
         },
+      ],
+    },
+    {
+      field: 'Tools & Others',
+      skills: [
+        { skill: 'figma', icon: SiFigma },
+        { skill: 'odoo', icon: SiOdoo },
+        { skill: 'chrome-devtools', icon: SiGooglechrome },
+        { skill: 'wordpress', icon: SiWordpress },
+        { skill: 'vercel', icon: SiVercel },
       ],
     },
   ]
