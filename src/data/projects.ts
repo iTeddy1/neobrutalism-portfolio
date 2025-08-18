@@ -7,16 +7,23 @@ type Project = {
   role?: string
   stack?: string[]
   highlights?: string[]
+  category?: string
+  status?: string
+  featured?: boolean
 }
 
 const PROJECTS: Project[] = [
   {
     name: 'TVE Technical',
     description:
-      'Freelance project building a website with high performance and accessibility.',
+      'High-performance freelance website with accessibility focus, multilingual support, and headless CMS architecture.',
     liveLink: 'https://iteddy1.vercel.app/work',
     previewImage: '/project1.png',
     repoUrl: '',
+    category: 'Web Development',
+    status: 'Live',
+    featured: true,
+    role: 'Full-Stack Developer',
     stack: [
       'Next.js',
       'TypeScript',
@@ -31,21 +38,25 @@ const PROJECTS: Project[] = [
       'shadcn/ui',
     ],
     highlights: [
-      '100/100 Lighthouse scores',
-      'Reduced First Contentful Paint by 40%',
-      'Built custom CMS with ACF and TanStack Query',
-      'CI/CD pipeline with Vercel, Render, TiDB',
-      'Site-wide search (<200ms), multilingual support',
-      '100% accessibility score',
+      'Achieved 100/100 Lighthouse performance score and reduced First Contentful Paint by 40%',
+      'Built headless WordPress CMS with 5+ custom content types for non-dev content management',
+      'Implemented TanStack Query data-fetching strategy, reducing client-side API requests by 60%',
+      'Designed CI/CD workflow across Vercel, Render, and TiDB for streamlined team deployment',
+      'Built site-wide search system with <200ms response time',
+      'Integrated i18next for multilingual support (EN & VN) with future scalability in mind',
     ],
   },
   {
-    name: 'Laandlin (React Native App)',
+    name: 'Laandlin Mobile App',
     description:
-      'School project for a mobile e-commerce app with optimized backend.',
+      'React Native e-commerce mobile application with optimized backend and modern UI patterns.',
     liveLink: '',
     previewImage: '/project2.png',
     repoUrl: '',
+    category: 'Mobile Development',
+    status: 'Completed',
+    featured: true,
+    role: 'Mobile Developer',
     stack: [
       'React Native',
       'Node.js',
@@ -56,39 +67,59 @@ const PROJECTS: Project[] = [
       'TypeScript',
     ],
     highlights: [
-      'JWT authentication',
-      'Product filtering & recommendations',
-      'API response time reduced from 800ms to 210ms',
-      'Backend deployed on Vercel',
+      'Implemented JWT authentication and secure user management',
+      'Built product filtering & recommendation algorithms',
+      'Optimized API response time from 800ms to 210ms (73% improvement)',
+      'Deployed scalable backend infrastructure on Vercel',
+      'Cross-platform compatibility for iOS and Android',
+    ],
+  },
+  {
+    name: 'Personal Portfolio Website',
+    description:
+      'Modern portfolio website showcasing projects and skills with neobrutalism design and interactive features.',
+    liveLink: 'https://iteddy1.vercel.app',
+    previewImage: '/preview.png',
+    repoUrl: 'https://github.com/iTeddy1/neobrutalism-portfolio',
+    category: 'Web Development',
+    status: 'Live',
+    featured: true,
+    role: 'Frontend Developer',
+    stack: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'shadcn/ui',
+      'Framer Motion',
+      'reCAPTCHA v3',
+    ],
+    highlights: [
+      'Responsive neobrutalism design with dark/light theme support',
+      'Interactive contact form with reCAPTCHA v3 integration',
+      'Performance-optimized with Next.js 15 and modern React patterns',
+      'Accessibility-compliant components using shadcn/ui',
+      'Deployed on Vercel with automatic CI/CD integration',
     ],
   },
   {
     name: 'Laandlin E-Commerce Website',
     description:
-      'Freelance web project with full e-commerce functionality and performance optimization.',
+      'Full-featured e-commerce website with performance optimization and modern React architecture.',
     liveLink: '',
     previewImage: '/project3.png',
     repoUrl: '',
+    category: 'Web Development',
+    status: 'Completed',
+    featured: false,
+    role: 'Frontend Developer',
     stack: ['React', 'Tailwind CSS', 'TypeScript', 'Redux', 'Vite'],
     highlights: [
-      'Product catalog, search, cart, checkout',
-      'Unified color palette across 25+ pages',
-      'Bundle size reduced from 20MB to 2MB',
-      '90% improvement in load performance',
-    ],
-  },
-  {
-    name: 'Frenzy',
-    description:
-      'School project delivering a full-stack Laravel e-commerce site.',
-    liveLink: '',
-    previewImage: '/project4.png',
-    repoUrl: '',
-    stack: ['Laravel', 'Blade', 'JavaScript', 'MySQL'],
-    highlights: [
-      '10-table MySQL schema',
-      'Multi-step checkout',
-      'Usability testing reduced bugs by 15%',
+      'Complete e-commerce functionality: catalog, search, cart, checkout',
+      'Consistent design system with unified color palette across 25+ pages',
+      'Bundle size optimization from 20MB to 2MB (90% reduction)',
+      'Improved load performance by 90% through code splitting and lazy loading',
+      'State management with Redux for complex user interactions',
     ],
   },
 ]

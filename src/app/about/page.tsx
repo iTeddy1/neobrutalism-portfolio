@@ -1,6 +1,7 @@
 import Education from '@/components/sections/education'
 import Experience from '@/components/sections/experience'
 import Skills from '@/components/sections/skills'
+import Coursework from '@/components/sections/coursework'
 import {
   Card,
   CardContent,
@@ -13,34 +14,33 @@ import { Button } from '@/components/ui/button'
 import { ContactDialog } from '@/components/contact-dialog'
 import education from '@/data/education'
 
+const strengths = [
+  'Performance-first mindset (web + mobile)',
+  'Pixel-perfect, responsive UI from Figma',
+  'Clean, typed code (TypeScript, ESLint)',
+  'State management with Redux and modern hooks',
+  'Accessibility and UX details that matter',
+]
+
+const tooling = [
+  'Vercel',
+  'Figma',
+  'Chrome DevTools',
+  'WordPress',
+  'Docker',
+  'Git & PR reviews',
+]
+
+const learning = ['GraphQL', 'React Native patterns', 'CI/CD automation']
+
 export default function About() {
-  const strengths = [
-    'Performance-first mindset (web + mobile)',
-    'Pixel-perfect, responsive UI from Figma',
-    'Clean, typed code (TypeScript, ESLint)',
-    'State management with Redux and modern hooks',
-    'Accessibility and UX details that matter',
-  ]
-
-  const tooling = [
-    'Vercel',
-    'Figma',
-    'Chrome DevTools',
-    'WordPress',
-    'Docker',
-    'Git & PR reviews',
-  ]
-
-  const learning = ['GraphQL', 'React Native patterns', 'CI/CD automation']
-
   return (
     <div className="font-base">
       <h1 className="font-heading mb-8 text-2xl sm:text-4xl">About</h1>
 
-      <Card className="mb-8">
+      <Card className="mb-6">
         <CardHeader>
-          <CardTitle className="text-xl sm:text-2xl">About me</CardTitle>
-          <CardDescription className="text-base sm:text-lg">
+          <CardDescription className="text-base">
             I design and build fast, reliable interfaces for web and mobile. My
             focus is shipping production-quality UI that feels great and scales.
             I enjoy turning Figma designs into clean, accessible components and
@@ -49,10 +49,10 @@ export default function About() {
         </CardHeader>
         <CardContent>
           <p className="text-base">
-            Specialized in {education.specialize?.toLowerCase()} for the{' '}
-            {education.field?.toLowerCase()} domain, I care about readable code,
-            thoughtful UX, and maintainable systems. I’m comfortable across
-            React, Next.js, and React Native with TypeScript and Tailwind.
+            Specialized in {education.specialize?.toLowerCase()}, I care about
+            readable code, thoughtful UX, and maintainable systems. I’m
+            comfortable across React, Next.js, and React Native with TypeScript
+            and Tailwind.
           </p>
         </CardContent>
       </Card>
@@ -87,7 +87,7 @@ export default function About() {
         </Card>
       </div>
 
-      <Card className="mt-6 mb-12">
+      <Card className="mt-6 mb-16">
         <CardHeader>
           <CardTitle className="text-lg">Currently learning</CardTitle>
         </CardHeader>
@@ -105,6 +105,8 @@ export default function About() {
       <Skills />
 
       <Experience />
+
+      <Coursework />
 
       {/* Contact Section */}
       <Card className="mt-16">

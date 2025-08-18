@@ -17,10 +17,6 @@ const links: { title: string; icon: IconType; href: string }[] = [
     icon: Linkedin,
     href: 'https://www.linkedin.com/in/duytrungnguyen1/',
   },
-  // {
-  //   icon: SiMedium,
-  //   href: 'https://medium.com/@johndoe',
-  // },
 ]
 
 export default links
